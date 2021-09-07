@@ -38,6 +38,7 @@ class ResponsiveListScaffold extends StatelessWidget {
     this.detailScaffoldKey,
     this.mobileRootNavigator = false,
     this.mobileNavigator,
+    required this.scrollController,
   })  : childDelagate = SliverChildListDelegate(
           children,
           addAutomaticKeepAlives: false,
@@ -46,39 +47,40 @@ class ResponsiveListScaffold extends StatelessWidget {
         ),
         super(key: key);
 
-  ResponsiveListScaffold.builder({
-    Key? key,
-    this.tabletBreakpoint = 720.0,
-    required this.detailBuilder,
-    this.appBar,
-    this.drawer,
-    this.slivers,
-    this.endDrawer,
-    required int itemCount,
-    required IndexedWidgetBuilder itemBuilder,
-    this.primary = true,
-    // this.extendBody = false,
-    this.drawerDragStartBehavior = DragStartBehavior.start,
-    this.backgroundColor,
-    this.bottomNavigationBar,
-    this.bottomSheet,
-    this.floatingActionButton,
-    this.nullItems,
-    this.emptyItems,
-    this.floatingActionButtonAnimator,
-    this.floatingActionButtonLocation,
-    this.persistentFooterButtons,
-    this.resizeToAvoidBottomInset,
-    this.resizeToAvoidBottomPadding,
-    this.tabletItemNotSelected,
-    this.tabletSideMenu,
-    this.tabletFlexDetailView = 8,
-    this.tabletFlexListView = 4,
-    this.scaffoldKey,
-    this.detailScaffoldKey,
-    this.mobileRootNavigator = false,
-    this.mobileNavigator,
-  })  : childDelagate = SliverChildBuilderDelegate(
+  ResponsiveListScaffold.builder(
+      {Key? key,
+      this.tabletBreakpoint = 720.0,
+      required this.detailBuilder,
+      this.appBar,
+      this.drawer,
+      this.slivers,
+      this.endDrawer,
+      required int itemCount,
+      required IndexedWidgetBuilder itemBuilder,
+      this.primary = true,
+      // this.extendBody = false,
+      this.drawerDragStartBehavior = DragStartBehavior.start,
+      this.backgroundColor,
+      this.bottomNavigationBar,
+      this.bottomSheet,
+      this.floatingActionButton,
+      this.nullItems,
+      this.emptyItems,
+      this.floatingActionButtonAnimator,
+      this.floatingActionButtonLocation,
+      this.persistentFooterButtons,
+      this.resizeToAvoidBottomInset,
+      this.resizeToAvoidBottomPadding,
+      this.tabletItemNotSelected,
+      this.tabletSideMenu,
+      this.tabletFlexDetailView = 8,
+      this.tabletFlexListView = 4,
+      this.scaffoldKey,
+      this.detailScaffoldKey,
+      this.mobileRootNavigator = false,
+      this.mobileNavigator,
+      required this.scrollController})
+      : childDelagate = SliverChildBuilderDelegate(
           itemBuilder,
           childCount: itemCount,
           addAutomaticKeepAlives: false,
@@ -87,38 +89,39 @@ class ResponsiveListScaffold extends StatelessWidget {
         ),
         super(key: key);
 
-  const ResponsiveListScaffold.custom({
-    Key? key,
-    this.tabletBreakpoint = 720.0,
-    required this.detailBuilder,
-    this.appBar,
-    this.drawer,
-    this.slivers,
-    this.endDrawer,
-    required this.childDelagate,
-    this.primary = true,
-    // this.extendBody = false,
-    this.drawerDragStartBehavior = DragStartBehavior.start,
-    this.backgroundColor,
-    this.bottomNavigationBar,
-    this.bottomSheet,
-    this.floatingActionButton,
-    this.nullItems,
-    this.emptyItems,
-    this.floatingActionButtonAnimator,
-    this.floatingActionButtonLocation,
-    this.persistentFooterButtons,
-    this.resizeToAvoidBottomInset,
-    this.resizeToAvoidBottomPadding,
-    this.tabletItemNotSelected,
-    this.tabletSideMenu,
-    this.tabletFlexDetailView = 8,
-    this.tabletFlexListView = 4,
-    this.scaffoldKey,
-    this.detailScaffoldKey,
-    this.mobileRootNavigator = false,
-    this.mobileNavigator,
-  }) : super(key: key);
+  const ResponsiveListScaffold.custom(
+      {Key? key,
+      this.tabletBreakpoint = 720.0,
+      required this.detailBuilder,
+      this.appBar,
+      this.drawer,
+      this.slivers,
+      this.endDrawer,
+      required this.childDelagate,
+      this.primary = true,
+      // this.extendBody = false,
+      this.drawerDragStartBehavior = DragStartBehavior.start,
+      this.backgroundColor,
+      this.bottomNavigationBar,
+      this.bottomSheet,
+      this.floatingActionButton,
+      this.nullItems,
+      this.emptyItems,
+      this.floatingActionButtonAnimator,
+      this.floatingActionButtonLocation,
+      this.persistentFooterButtons,
+      this.resizeToAvoidBottomInset,
+      this.resizeToAvoidBottomPadding,
+      this.tabletItemNotSelected,
+      this.tabletSideMenu,
+      this.tabletFlexDetailView = 8,
+      this.tabletFlexListView = 4,
+      this.scaffoldKey,
+      this.detailScaffoldKey,
+      this.mobileRootNavigator = false,
+      this.mobileNavigator,
+      required this.scrollController})
+      : super(key: key);
 
   final double tabletBreakpoint;
 
@@ -172,6 +175,8 @@ class ResponsiveListScaffold extends StatelessWidget {
 
   final SliverChildDelegate childDelagate;
 
+  final ScrollController scrollController;
+
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
@@ -206,6 +211,7 @@ class ResponsiveListScaffold extends StatelessWidget {
             flexListView: tabletFlexListView,
             sideMenu: tabletSideMenu,
             itemNotSelected: tabletItemNotSelected,
+            scrollController: scrollController,
           );
         }
 

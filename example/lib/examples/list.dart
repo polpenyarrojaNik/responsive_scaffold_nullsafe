@@ -10,7 +10,7 @@ class ListExample extends StatefulWidget {
 
 class _ListExampleState extends State<ListExample> {
   final _scaffoldKey = GlobalKey<ScaffoldState>();
-
+  final ScrollController scrollController = ScrollController();
   late List<String> _items;
 
   @override
@@ -22,6 +22,7 @@ class _ListExampleState extends State<ListExample> {
   @override
   Widget build(BuildContext context) {
     return ResponsiveListScaffold.builder(
+      scrollController: scrollController,
       scaffoldKey: _scaffoldKey,
       detailBuilder: (BuildContext context, int? index, bool tablet) {
         final i = _items[index!];

@@ -5,34 +5,35 @@ import '../../../responsive_scaffold.dart';
 import '../responsive_list.dart';
 
 class TabletView extends StatefulWidget {
-  TabletView({
-    Key? key,
-    required this.slivers,
-    required this.detailBuilder,
-    required List<Widget> children,
-    required this.itemNotSelected,
-    required this.sideMenu,
-    this.flexListView = 4,
-    this.flexDetailView = 8,
-    required this.appBar,
-    required this.backgroundColor,
-    required this.bottomNavigationBar,
-    required this.bottomSheet,
-    required this.drawer,
-    required this.drawerDragStartBehavior,
-    required this.endDrawer,
-    required this.floatingActionButton,
-    required this.floatingActionButtonAnimator,
-    required this.floatingActionButtonLocation,
-    required this.persistentFooterButtons,
-    required this.primary,
-    required this.resizeToAvoidBottomInset,
-    required this.resizeToAvoidBottomPadding,
-    required this.scaffoldkey,
-    required this.detailScaffoldKey,
-    required this.nullItems,
-    required this.emptyItems,
-  })   : childDelagate = SliverChildListDelegate(
+  TabletView(
+      {Key? key,
+      required this.slivers,
+      required this.detailBuilder,
+      required List<Widget> children,
+      required this.itemNotSelected,
+      required this.sideMenu,
+      this.flexListView = 4,
+      this.flexDetailView = 8,
+      required this.appBar,
+      required this.backgroundColor,
+      required this.bottomNavigationBar,
+      required this.bottomSheet,
+      required this.drawer,
+      required this.drawerDragStartBehavior,
+      required this.endDrawer,
+      required this.floatingActionButton,
+      required this.floatingActionButtonAnimator,
+      required this.floatingActionButtonLocation,
+      required this.persistentFooterButtons,
+      required this.primary,
+      required this.resizeToAvoidBottomInset,
+      required this.resizeToAvoidBottomPadding,
+      required this.scaffoldkey,
+      required this.detailScaffoldKey,
+      required this.nullItems,
+      required this.emptyItems,
+      required this.scrollController})
+      : childDelagate = SliverChildListDelegate(
           children,
           addAutomaticKeepAlives: false,
           addRepaintBoundaries: false,
@@ -40,35 +41,36 @@ class TabletView extends StatefulWidget {
         ),
         super(key: key);
 
-  TabletView.builder({
-    Key? key,
-    required this.slivers,
-    required this.detailBuilder,
-    required int itemCount,
-    required IndexedWidgetBuilder itemBuilder,
-    required this.itemNotSelected,
-    required this.sideMenu,
-    this.flexListView = 4,
-    this.flexDetailView = 8,
-    required this.appBar,
-    required this.backgroundColor,
-    required this.bottomNavigationBar,
-    required this.bottomSheet,
-    required this.drawer,
-    required this.drawerDragStartBehavior,
-    required this.endDrawer,
-    required this.floatingActionButton,
-    required this.floatingActionButtonAnimator,
-    required this.floatingActionButtonLocation,
-    required this.persistentFooterButtons,
-    required this.primary,
-    required this.resizeToAvoidBottomInset,
-    required this.resizeToAvoidBottomPadding,
-    required this.scaffoldkey,
-    required this.detailScaffoldKey,
-    required this.nullItems,
-    required this.emptyItems,
-  })   : childDelagate = SliverChildBuilderDelegate(
+  TabletView.builder(
+      {Key? key,
+      required this.slivers,
+      required this.detailBuilder,
+      required int itemCount,
+      required IndexedWidgetBuilder itemBuilder,
+      required this.itemNotSelected,
+      required this.sideMenu,
+      this.flexListView = 4,
+      this.flexDetailView = 8,
+      required this.appBar,
+      required this.backgroundColor,
+      required this.bottomNavigationBar,
+      required this.bottomSheet,
+      required this.drawer,
+      required this.drawerDragStartBehavior,
+      required this.endDrawer,
+      required this.floatingActionButton,
+      required this.floatingActionButtonAnimator,
+      required this.floatingActionButtonLocation,
+      required this.persistentFooterButtons,
+      required this.primary,
+      required this.resizeToAvoidBottomInset,
+      required this.resizeToAvoidBottomPadding,
+      required this.scaffoldkey,
+      required this.detailScaffoldKey,
+      required this.nullItems,
+      required this.emptyItems,
+      required this.scrollController})
+      : childDelagate = SliverChildBuilderDelegate(
           itemBuilder,
           childCount: itemCount,
           addAutomaticKeepAlives: false,
@@ -77,34 +79,35 @@ class TabletView extends StatefulWidget {
         ),
         super(key: key);
 
-  const TabletView.custom({
-    Key? key,
-    required this.slivers,
-    required this.detailBuilder,
-    required this.childDelagate,
-    required this.itemNotSelected,
-    required this.sideMenu,
-    this.flexListView = 4,
-    this.flexDetailView = 8,
-    required this.appBar,
-    required this.backgroundColor,
-    required this.bottomNavigationBar,
-    required this.bottomSheet,
-    required this.drawer,
-    required this.drawerDragStartBehavior,
-    required this.endDrawer,
-    required this.floatingActionButton,
-    required this.floatingActionButtonAnimator,
-    required this.floatingActionButtonLocation,
-    required this.persistentFooterButtons,
-    required this.primary,
-    required this.resizeToAvoidBottomInset,
-    required this.resizeToAvoidBottomPadding,
-    required this.scaffoldkey,
-    required this.detailScaffoldKey,
-    required this.nullItems,
-    required this.emptyItems,
-  }) : super(key: key);
+  const TabletView.custom(
+      {Key? key,
+      required this.slivers,
+      required this.detailBuilder,
+      required this.childDelagate,
+      required this.itemNotSelected,
+      required this.sideMenu,
+      this.flexListView = 4,
+      this.flexDetailView = 8,
+      required this.appBar,
+      required this.backgroundColor,
+      required this.bottomNavigationBar,
+      required this.bottomSheet,
+      required this.drawer,
+      required this.drawerDragStartBehavior,
+      required this.endDrawer,
+      required this.floatingActionButton,
+      required this.floatingActionButtonAnimator,
+      required this.floatingActionButtonLocation,
+      required this.persistentFooterButtons,
+      required this.primary,
+      required this.resizeToAvoidBottomInset,
+      required this.resizeToAvoidBottomPadding,
+      required this.scaffoldkey,
+      required this.detailScaffoldKey,
+      required this.nullItems,
+      required this.emptyItems,
+      required this.scrollController})
+      : super(key: key);
 
   final List<Widget>? slivers;
   final DetailWidgetBuilder detailBuilder;
@@ -145,6 +148,8 @@ class TabletView extends StatefulWidget {
   final Widget? drawer, endDrawer;
 
   final SliverChildDelegate childDelagate;
+
+  final ScrollController scrollController;
 
   @override
   _TabletViewState createState() => _TabletViewState();
@@ -191,6 +196,7 @@ class _TabletViewState extends State<TabletView> {
               endDrawer: widget.endDrawer,
               appBar: widget.appBar,
               body: CustomScrollView(
+                controller: widget.scrollController,
                 slivers: <Widget>[
                   ...?widget.slivers,
                   Builder(
@@ -267,7 +273,7 @@ class _DetailView extends StatelessWidget {
     required DetailsScreen? details,
     required this.itemNotSelected,
     required this.detailScaffoldKey,
-  })   : _details = details,
+  })  : _details = details,
         super(key: key);
 
   final DetailsScreen? _details;
